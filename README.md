@@ -24,3 +24,7 @@ command- python manage.py makemigrations and python manage.py migrate
 #run program
 
 command - python manage.py runserver
+
+
+
+# for api documentation open testing.postman.json in postman
