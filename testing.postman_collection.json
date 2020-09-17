@@ -1,0 +1,522 @@
+{
+	"info": {
+		"_postman_id": "48892a6e-1f93-4cb7-b74e-1518e48c8caf",
+		"name": "testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"priyam@gmail.com\",\"password\":\"abc\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"priyam1@gmail.com\",\"password\":\"abc\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 9aa40c48fe1c2b1c0695b88f6ff8881bb02f36d8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "about",
+							"value": "i am a programmer",
+							"type": "text"
+						},
+						{
+							"key": "interest",
+							"value": "",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/createprofile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"createprofile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_interest list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 9aa40c48fe1c2b1c0695b88f6ff8881bb02f36d8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "about",
+							"value": "i am a programmer",
+							"type": "text"
+						},
+						{
+							"key": "interest",
+							"value": "",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/get_interest/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get_interest",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutual interest profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 9aa40c48fe1c2b1c0695b88f6ff8881bb02f36d8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "about",
+							"value": "i am a programmer",
+							"type": "text"
+						},
+						{
+							"key": "interest",
+							"value": "",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/mutual_interst_profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"mutual_interst_profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "follow profiles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 03aeb2752b858395635c08c184fac8a283cadeb0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "about",
+							"value": "i am a programmer",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "interest",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user_follow",
+							"value": "1",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/follow_people/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"follow_people",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "see whom you are following",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 03aeb2752b858395635c08c184fac8a283cadeb0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "about",
+							"value": "i am a programmer",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "interest",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user_follow",
+							"value": "1",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/youfollowing_profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"youfollowing_profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 03aeb2752b858395635c08c184fac8a283cadeb0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "about",
+							"value": "i am a programmer",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "interest",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user_follow",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "post_text",
+							"value": "good day",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create_post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create_post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "see the post whom you are following",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 1068deab634a38d6d00fb4a99fa293c924ba07ba",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "about",
+							"value": "i am a programmer",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "interest",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user_follow",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "post_text",
+							"value": "good day not a",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create_post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create_post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unfollow profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 1068deab634a38d6d00fb4a99fa293c924ba07ba",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "about",
+							"value": "i am a programmer",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "interest",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user_follow",
+							"value": "2",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/unfollow/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"unfollow",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
